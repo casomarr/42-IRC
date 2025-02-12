@@ -10,19 +10,19 @@ Create a functional Internet Relay Chat (IRC) server and client that allows mult
 ## Key Features to Implement
 
 1. Server:
-- Handles multiple client connections simultaneously.
-- Manages channels (creation, joining, leaving).
-- Supports basic IRC commands like /join, /part, /msg, /nick, /kick, etc.
-- Processes and broadcasts messages to the appropriate users and channels.
+	- Handles multiple client connections simultaneously.
+	- Manages channels (creation, joining, leaving).
+	- Supports basic IRC commands like /join, /part, /msg, /nick, /kick, etc.
+	- Processes and broadcasts messages to the appropriate users and channels.
 
 2. Client:
-- Connects to the server.
-- Sends and receives messages.
-- Displays messages in a readable format.
+	- Connects to the server.
+	- Sends and receives messages.
+	- Displays messages in a readable format.
 
 3. Communication:
-- Uses sockets for network communication (TCP/IP).
-- Follows the IRC protocol.
+	- Uses sockets for network communication (TCP/IP).
+	- Follows the IRC protocol.
 
 ## Skills Developed
 
@@ -72,16 +72,15 @@ Example : ```/connect localhost 1200 testPassword```
 
 
 Example commands:
+- To join a channel:
 ```sh
 /join #channelName
 ```
-To join a channel
+- To send a private message:
 ```sh
 /msg username message
 ```
-To send a private message
-
-See more commands in the "commands" folder.
+- See more commands in the "commands" folder.
 
 ## BONUS
 
