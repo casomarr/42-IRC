@@ -7,7 +7,7 @@
 Create a functional Internet Relay Chat (IRC) server and client that allows multiple users to connect, communicate in channels, and send private messages. \
 **IRC** is a real-time messaging protocol used for group communication. 
 
-## Key Features
+## Key Features to Implement
 
 1. Server:
 - Handles multiple client connections simultaneously.
@@ -28,5 +28,77 @@ Create a functional Internet Relay Chat (IRC) server and client that allows mult
 
 - C++ Programming
 - Socket Programming (for network communication).
-- Multiplexing (select() or poll()) to handle multiple clients efficiently.
-- Threading (optional, if required for advanced features).
+- Multiplexing (epoll()) to handle multiple clients efficiently.
+
+## Technical Challenges
+
+- Managing concurrency (handling multiple clients simultaneously).
+- Implementing protocol adherence (follow IRC RFC specifications).
+- Ensuring scalability and robustness (handling disconnections, malformed input, etc).
+
+## Installation
+
+To set up this project locally, follow these steps:
+
+1. **Clone the repository to your local machine:**
+	```sh
+	git clone git@github.com:casomarr/42-IRC.git
+	```
+
+2. **Navigate to the project directory:**
+	```sh
+	cd 42-IRC
+	```
+
+3. **Compile the project:**
+	```sh
+	cd IRC
+   make
+	```
+
+4. **Run the server:**
+	```sh
+	./ircserv <port> <password>
+	```
+ Example : ```./ircserv 1200 testPassword```
+
+## Usage
+
+**Connect to the server:** open a new terminal and run
+```sh
+/connect localhost <port> <password>
+```
+Example : ```/connect localhost 1200 testPassword```
+
+
+Example commands:
+```sh
+/join #channelName
+```
+To join a channel
+```sh
+/msg username message
+```
+To send a private message
+
+See more commands in the "commands" folder.
+
+## BONUS
+
+**Run the BOT:**
+	```sh
+    cd Bonus
+     make
+	  ./ircbot <port> <password>
+	```
+ 
+**Join the bad_apple_bot channel:**
+	```sh
+    /join bad_apple_bot
+	```
+ 
+
+ 
+
+
+
